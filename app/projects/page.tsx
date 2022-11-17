@@ -7,7 +7,7 @@ import roguelikeImage from "public/roguelike.png";
 
 export default function Projects() {
   return (
-    <div className="mt-20 flex flex-col gap-10">
+    <div className="mt-20 flex flex-col gap-6">
       <ProjectCard
         title={"Personal Website"}
         content={"content to be added"}

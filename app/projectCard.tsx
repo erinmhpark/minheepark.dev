@@ -8,7 +8,10 @@ export default function ProjectCard({
   img,
 }: ProjectCardProp) {
   return (
-    <Link href={href} className="flex items-center gap-10">
+    <Link
+      href={href}
+      className="flex items-center gap-10 rounded-md bg-slate-100 p-4 transition duration-300 hover:bg-slate-200"
+    >
       <Image
         className="rounded-full"
         src={img}
@@ -17,7 +20,7 @@ export default function ProjectCard({
         height={80}
       />
       <div>
-        <div className="font-semibold">{title}</div>
+        <div className="font-bold">{title}</div>
         <div>{content}</div>
       </div>
     </Link>

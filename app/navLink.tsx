@@ -1,15 +1,11 @@
-"use client"; // rendering the page on client
-// Q: why not render on server??
-// A: because server is static.
-// And What we are doing here is dynamic, rendering depends on the user's action.
-// i.e., click to borderline an item on the navbar
-import Link from "next/link"; // difference from named function?
+"use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function Navlink({
   href,
-  children, // what is children doing here?
+  children,
 }: {
   href: string;
   children: React.ReactNode;
@@ -19,7 +15,9 @@ export default function Navlink({
   return (
     <Link
       className={
-        active ? "underline decoration-slate-500 underline-offset-8" : ""
+        active
+          ? "underline decoration-slate-800 underline-offset-8"
+          : "decoration-slate-500 hover:underline hover:underline-offset-8"
       }
       href={href}
     >

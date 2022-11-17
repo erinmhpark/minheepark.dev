@@ -12,12 +12,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head />
-      <body className="flex h-screen flex-col items-center gap-2 p-2">
+      <body className="flex h-screen flex-col items-center gap-2 bg-slate-50 p-2">
         <Navbar />
-        <div className="relative flex w-3/5 bg-white">{children}</div>
+        <div className="relative flex w-3/5">{children}</div>
+        <Footer />
       </body>
     </html>
   );
 }
 
 //bg-slate-50 p-2
+
+function Footer() {
+  return <div className=""></div>;
+}

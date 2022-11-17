@@ -1,9 +1,8 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import ProjectCard from "app/projectCard";
+import Image from "next/image";
 import cardGameImage from "public/cardGame.png";
 import personWebsiteImage from "public/personalWebsite.png";
 import profilePic from "public/profile.png";
-import ProjectCard from "app/projectCard";
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         <ProjectTitle />
         <ProjectCard
           title={"Personal Website"}
-          content={"content to be added"}
+          content={"Created with Next.js, TypeScript, & Tailwind CSS"}
           href={"https://thriving-paprenjak-1a594f.netlify.app/index.html"}
           img={personWebsiteImage}
         />
@@ -53,5 +52,3 @@ function ProfileContent() {
 function ProjectTitle() {
   return <h2 className="text-lg font-semibold">Projects</h2>;
 }
-
-
