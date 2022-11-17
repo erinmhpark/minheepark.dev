@@ -1,3 +1,21 @@
 export default function Readings() {
-  return <div>Readings</div>;
+  return (
+    <div className="text-6xl">
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+      <p>reading item</p>
+    </div>
+  );
 }
