@@ -25,10 +25,13 @@ function ProfileTitle() {
 
 function ProfileContent() {
   return (
-    <p>
-      I am a software engineer based in San Francisco. Currently, I&apos;m
-      pursuing a master&apos;s in Information Systems at Northeastern.
-    </p>
+    <>
+      <p>I am a software engineer based in San Francisco.</p>
+      <p>
+        Currently, I&apos;m pursuing a master&apos;s in Information Systems at
+        Northeastern.
+      </p>
+    </>
   );
 }
 
