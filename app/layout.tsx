@@ -1,5 +1,8 @@
+import { Inter } from "@next/font/google";
 import "app/globals.css";
 import Navbar from "app/navbar";
+
+const inter = Inter();
 
 export default function RootLayout({
   children,
@@ -7,7 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head />
       <body className="flex h-screen flex-col items-center gap-2 p-2">
         <Navbar />
