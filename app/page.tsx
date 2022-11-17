@@ -1,19 +1,34 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import cardGameImage from "public/cardGame.png";
+import personWebsiteImage from "public/personalWebsite.png";
 import profilePic from "public/profile.png";
+import ProjectCard from "app/projectCard";
 
 export default function Home() {
   return (
-    <div className="mt-20 flex flex-col gap-2 border-2 border-solid border-blue-700 p-2">
-      <div className="flex flex-row border-2 border-solid border-blue-500">
+    <div className="mt-20 flex flex-col gap-7 ">
+      <div className="flex flex-row gap-10">
         <div className="flex flex-col place-content-center gap-2 p-4">
           <ProfileTitle />
           <ProfileContent />
         </div>
         <Image src={profilePic} alt="profile" width={210} height={210} />
       </div>
-      <div className="gap-2 border-2 border-solid border-blue-500 p-4">
+      <div className="flex flex-col gap-4 p-4">
         <ProjectTitle />
-        <LandingProjects />
+        <ProjectCard
+          title={"Personal Website"}
+          content={"content to be added"}
+          href={"https://thriving-paprenjak-1a594f.netlify.app/index.html"}
+          img={personWebsiteImage}
+        />
+        <ProjectCard
+          title={"Card Game"}
+          content={"content to be added"}
+          href={"https://serene-alfajores-370611.netlify.app/"}
+          img={cardGameImage}
+        />
       </div>
     </div>
   );
@@ -39,6 +54,4 @@ function ProjectTitle() {
   return <h2 className="text-lg font-semibold">Projects</h2>;
 }
 
-function LandingProjects() {
-  return <div>More Content Here</div>;
-}
+
