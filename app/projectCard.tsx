@@ -29,7 +29,7 @@ export default function ProjectCard({
 
 interface ProjectCardProp {
   title: string;
-  content: string;
+  content: string | JSX.Element;
   href: string;
   img: StaticImageData;
 }

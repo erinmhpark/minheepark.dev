@@ -6,8 +6,8 @@ import profilePic from "public/profile.png";
 
 export default function Home() {
   return (
-    <div className="mt-20 flex flex-col gap-7 ">
-      <div className="flex flex-row gap-10">
+    <div className="mt-4 flex flex-col gap-7 sm:mt-20 ">
+      <div className="flex flex-col items-center gap-10 sm:flex-row">
         <div className="flex flex-col place-content-center gap-2 p-4">
           <ProfileTitle />
           <ProfileContent />
@@ -18,13 +18,25 @@ export default function Home() {
         <ProjectTitle />
         <ProjectCard
           title={"Personal Website"}
-          content={"Created with Next.js, TypeScript, & Tailwind CSS"}
+          content={
+            <>
+              Powered by{" "}
+              <span className="text-cyan-800">
+                Next.js server components, TypeScript, & Tailwind CSS
+              </span>
+            </>
+          }
           href={"https://thriving-paprenjak-1a594f.netlify.app/index.html"}
           img={personWebsiteImage}
         />
         <ProjectCard
           title={"Card Game"}
-          content={"content to be added"}
+          content={
+            <>
+              A memory card game to test your memorization skills, built with{" "}
+              <span className="text-cyan-800">HTML, Javascript, & CSS</span>
+            </>
+          }
           href={"https://serene-alfajores-370611.netlify.app/"}
           img={cardGameImage}
         />
