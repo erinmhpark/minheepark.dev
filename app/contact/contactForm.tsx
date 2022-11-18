@@ -9,7 +9,6 @@ export default function ContactForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setFormSubmitted(true);
-    //logic to send message via email
   };
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
