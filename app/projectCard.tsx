@@ -6,6 +6,7 @@ export default function ProjectCard({
   content,
   href,
   img,
+  buildDate,
 }: ProjectCardProp) {
   return (
     <Link
@@ -22,7 +23,13 @@ export default function ProjectCard({
         height={80}
       />
       <div>
-        <div className="font-bold">{title}</div>
+        <div className="font-bold">
+          {title}
+          <span className="pl-3 text-sm font-light text-gray-400">
+            {" "}
+            {buildDate}
+          </span>
+        </div>
         <div>{content}</div>
       </div>
     </Link>
@@ -34,4 +41,5 @@ interface ProjectCardProp {
   content: string | JSX.Element;
   href: string;
   img: StaticImageData;
+  buildDate?: string;
 }
