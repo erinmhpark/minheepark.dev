@@ -1,7 +1,7 @@
 export default function SocialContacts() {
   return (
     <div className="mt-4 flex justify-center gap-4 sm:mt-10">
-      <a href="mailto:park.minh@northeastern.edu">
+      <a href="mailto:erin@t3wg.com">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
