@@ -1,13 +1,15 @@
 import ProjectCard from "app/projectCard";
 import cardGameImage from "public/cardGame.png";
-import fizzBuzzImage from "public/fizzBuzz.png";
 import guessMyNumberImage from "public/guessMyNumber.png";
+import imageConverter from "public/imageConverter.png";
 import personWebsiteImage from "public/personalWebsite.png";
 import roguelikeImage from "public/roguelike.png";
+import tldrQandAImage from "public/tldrQandAImage.png";
 
 export default function Projects() {
   return (
     <div className="mt-4 flex flex-col gap-6 sm:mt-20">
+      <h2 className="font-semibold">Portfolio</h2>
       {projects.map((project) => (
         <ProjectCard
           key={project.href}
@@ -15,6 +17,7 @@ export default function Projects() {
           content={project.content}
           href={project.href}
           img={project.img}
+          buildDate={project.buildDate}
         />
       ))}
     </div>
@@ -22,6 +25,34 @@ export default function Projects() {
 }
 
 const projects = [
+  {
+    title: "TL;DR Summarize this + Q&A",
+    content: (
+      <>
+        The app provides quick TL;DR summaries and answers to questions for easy
+        knowledge access. Powered by{" "}
+        <span className="text-cyan-800">
+          OpenAI, JavaScript, Next.js & Tailwind CSS
+        </span>
+      </>
+    ),
+    href: "https://tldr-summarize-this.vercel.app/",
+    img: tldrQandAImage,
+    buildDate: "November 2022",
+  },
+  {
+    title: "Image Converter",
+    content: (
+      <>
+        This Image Convertor allows users to upload image files from their
+        desktop/laptop, and then convert the image(s) to various formats. Built
+        with <span className="text-cyan-800">Java and JavaFX</span>
+      </>
+    ),
+    href: "https://github.com/erinmhpark/INFO5100_002743228_MinheePark/tree/main/imageManagementTool_FinalProject",
+    img: imageConverter,
+    buildDate: "November 2022",
+  },
   {
     title: "Personal Website",
     content: (
@@ -32,8 +63,9 @@ const projects = [
         </span>
       </>
     ),
-    href: "https://curious-souffle-cb1a97.netlify.app",
+    href: "https://minheepark-dev.vercel.app/",
     img: personWebsiteImage,
+    buildDate: "November 2022",
   },
   {
     title: "Card Game",
@@ -45,6 +77,7 @@ const projects = [
     ),
     href: "https://serene-alfajores-370611.netlify.app/",
     img: cardGameImage,
+    buildDate: "October, 2022",
   },
   {
     title: "Guess My Number",
@@ -56,6 +89,7 @@ const projects = [
     ),
     href: "https://inquisitive-hotteok-a8a319.netlify.app",
     img: guessMyNumberImage,
+    buildDate: "October 2022",
   },
   {
     title: "Roguelike",
@@ -67,16 +101,6 @@ const projects = [
     ),
     href: "https://github.com/erinmhpark/roguelike",
     img: roguelikeImage,
-  },
-  {
-    title: "FizzBuzz",
-    content: (
-      <>
-        A word game to test your division skills, built with{" "}
-        <span className="text-cyan-800">HTML, Javascript, & CSS</span>
-      </>
-    ),
-    href: "https://ornate-unicorn-ab2470.netlify.app",
-    img: fizzBuzzImage,
+    buildDate: "June 2021",
   },
 ];
