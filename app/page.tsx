@@ -1,9 +1,8 @@
 import ProjectCard from "app/projectCard";
 import Image from "next/image";
-import personWebsiteImage from "public/personalWebsite.png";
+import imageConverter from "public/imageConverter.png";
 import profilePic from "public/profile.png";
-import tldrQnA from "public/tldrQandA.png";
-import imageConvertor from "public/imageConvertor.png"
+import tldrQandAImage from "public/tldrQandAImage.png";
 
 export default function Home() {
   return (
@@ -29,10 +28,10 @@ export default function Home() {
             </>
           }
           href={"https://tldr-summarize-this.vercel.app/"}
-          img={tldrQnA}
+          img={tldrQandAImage}
         />
         <ProjectCard
-          title={"Image Convertor"}
+          title={"Image Converter"}
           content={
             <>
               This Image Convertor allows users to upload image files from their
@@ -43,7 +42,7 @@ export default function Home() {
           href={
             "https://github.com/erinmhpark/INFO5100_002743228_MinheePark/tree/main/imageManagementTool_FinalProject"
           }
-          img={imageConvertor}
+          img={imageConverter}
         />
         {/* <ProjectCard
           title={"Card Game"}
@@ -78,5 +77,5 @@ function ProfileContent() {
 }
 
 function ProjectTitle() {
-  return <h2 className="text-lg font-semibold">Projects</h2>;
+  return <h2 className="text-lg font-semibold">Recent Projects</h2>;
 }
