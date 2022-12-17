@@ -39,9 +39,7 @@ export default function Home() {
               Built with <span className="text-cyan-800">Java and JavaFX</span>
             </>
           }
-          href={
-            "https://github.com/erinmhpark/INFO5100_002743228_MinheePark/tree/main/imageManagementTool_FinalProject"
-          }
+          href={"https://github.com/erinmhpark/imageConverter"}
           img={imageConverter}
         />
         {/* <ProjectCard
