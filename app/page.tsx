@@ -1,8 +1,9 @@
 import ProjectCard from "app/projectCard";
 import Image from "next/image";
-import cardGameImage from "public/cardGame.png";
 import personWebsiteImage from "public/personalWebsite.png";
 import profilePic from "public/profile.png";
+import tldrQnA from "public/tldrQandA.png";
+import imageConvertor from "public/imageConvertor.png"
 
 export default function Home() {
   return (
@@ -17,19 +18,34 @@ export default function Home() {
       <div className="flex flex-col gap-4 p-4">
         <ProjectTitle />
         <ProjectCard
-          title={"Personal Website"}
+          title={"TL;DR Summarize this + Q&A"}
           content={
             <>
-              Powered by{" "}
+              The app provides quick TL;DR summaries and answers to questions
+              for easy knowledge access. Powered by{" "}
               <span className="text-cyan-800">
-                Next.js server components, TypeScript, & Tailwind CSS
+                OpenAI, JavaScript, Next.js & Tailwind CSS
               </span>
             </>
           }
-          href={"https://thriving-paprenjak-1a594f.netlify.app/index.html"}
-          img={personWebsiteImage}
+          href={"https://tldr-summarize-this.vercel.app/"}
+          img={tldrQnA}
         />
         <ProjectCard
+          title={"Image Convertor"}
+          content={
+            <>
+              This Image Convertor allows users to upload image files from their
+              desktop/laptop, and then convert the image(s) to various formats.
+              Built with <span className="text-cyan-800">Java and JavaFX</span>
+            </>
+          }
+          href={
+            "https://github.com/erinmhpark/INFO5100_002743228_MinheePark/tree/main/imageManagementTool_FinalProject"
+          }
+          img={imageConvertor}
+        />
+        {/* <ProjectCard
           title={"Card Game"}
           content={
             <>
@@ -39,7 +55,7 @@ export default function Home() {
           }
           href={"https://serene-alfajores-370611.netlify.app/"}
           img={cardGameImage}
-        />
+        /> */}
       </div>
     </div>
   );
